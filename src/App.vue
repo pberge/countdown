@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="home">
+      <div class="container">
+        <div class="title">Auktoberfest is comming...</div>
+        <Counter class="counter"/>
+        <div>
+          <iframe src="https://giphy.com/embed/e6TR9n00dL3JS" frameBorder="0"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Counter
   }
 }
 </script>
@@ -24,5 +31,30 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.home {
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.counter {
+  margin: 1em;
+}
+
+iframe {
+  margin-top: 1em;
 }
 </style>
